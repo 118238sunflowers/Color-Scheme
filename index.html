@@ -1,38 +1,123 @@
- <h3> Sunflower Sunset Color Scheme </h3>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sunflower Sunset Color Scheme</title>
+  <style>
+    :root{
+      --yellow: #FFC300;
+      --brown:  #8B5A2B;
+      --pink:   #FF6F91;
+      --blue:   #4A90E2;
 
+      /* readable text colors for each background */
+      --text-on-yellow: #000;
+      --text-on-brown:  #fff;
+      --text-on-pink:   #000;
+      --text-on-blue:   #fff;
+    }
+
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      padding: 1rem;
+      background: #fffaf2;
+      color: #222;
+    }
+
+    table{
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 800px;
+      margin-top: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    thead th{
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 2px solid rgba(0,0,0,0.06);
+      font-weight: 600;
+    }
+
+    tbody td{
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+
+    /* Option A: color columns using <colgroup> classes */
+    col.col-yellow { background-color: var(--yellow); color: var(--text-on-yellow); }
+    col.col-brown  { background-color: var(--brown);  color: var(--text-on-brown); }
+    col.col-pink   { background-color: var(--pink);   color: var(--text-on-pink); }
+    col.col-blue   { background-color: var(--blue);   color: var(--text-on-blue); }
+
+    /* Option B: color individual cells using td classes (more control) */
+    td.yellow  { background-color: var(--yellow); color: var(--text-on-yellow); }
+    td.brown   { background-color: var(--brown);  color: var(--text-on-brown);  }
+    td.pink    { background-color: var(--pink);   color: var(--text-on-pink);   }
+    td.blue    { background-color: var(--blue);   color: var(--text-on-blue);   }
+
+    /* Make sure header text remains readable when columns are colored by <col> */
+    thead th, thead th + th, thead th + th + th, thead th + th + th + th {
+      /* no change: headers are separate from col backgrounds in many browsers;
+         add padding and a border so text doesn't blend into colored backgrounds */
+      position: relative;
+      z-index: 1;
+      background: transparent;
+    }
+
+    /* Optional: better contrast for table headers that end up on colored backgrounds */
+    thead th.col-header-on-color {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(2px);
+    }
+  </style>
+</head>
+<body>
+  <h3>Sunflower Sunset Color Scheme</h3>
+
+  <!-- colgroup colors entire columns (Option A). You can also apply classes directly to individual <td> (Option B). -->
   <table>
+    <colgroup>
+      <col span="1">                 <!-- labels column (no color) -->
+      <col class="col-yellow">       <!-- Yellow column -->
+      <col class="col-brown">        <!-- Brown column -->
+      <col class="col-pink">         <!-- Pink column -->
+      <col class="col-blue">         <!-- Blue column -->
+    </colgroup>
+
     <thead>
       <tr>
-        <th> Color</th>
-        <th> Yellow </th>
-        <th>Brown</th>
-        <th>Pink</th>
-        <th>Blue</th>
+        <th>Color</th>
+        <th class="col-header-on-color">Yellow</th>
+        <th class="col-header-on-color">Brown</th>
+        <th class="col-header-on-color">Pink</th>
+        <th class="col-header-on-color">Blue</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>HEX</td>
-        <td>#FFC300</td>
-        <td>#8B5A2B</td>
-        <td>#FF6F91</td>
-        <td>#4A90E2</td>
+        <td class="yellow">#FFC300</td>
+        <td class="brown">#8B5A2B</td>
+        <td class="pink">#FF6F91</td>
+        <td class="blue">#4A90E2</td>
       </tr>
       <tr>
-        <td>RBG</td>
-        <td>rgb(255, 195, 0)</td>
-        <td>rgb(139, 90, 43)</td>
-        <td>rgb(255, 111, 145)</td>
-        <td>rgb(74, 144, 226)</td>
+        <td>RGB</td>
+        <td class="yellow">rgb(255, 195, 0)</td>
+        <td class="brown">rgb(139, 90, 43)</td>
+        <td class="pink">rgb(255, 111, 145)</td>
+        <td class="blue">rgb(74, 144, 226)</td>
       </tr>
       <tr>
         <td>HSL</td>
-         <td>hsl(46, 100%, 50%)</td>
-         <td>hsl(29, 53%, 36%)</td>
-        <td>hsl(346, 100%, 72%)</td>
-         <td>hsl(212, 72%, 59%)</td>
+        <td class="yellow">hsl(46, 100%, 50%)</td>
+        <td class="brown">hsl(29, 53%, 36%)</td>
+        <td class="pink">hsl(346, 100%, 72%)</td>
+        <td class="blue">hsl(212, 72%, 59%)</td>
+      </tr>
     </tbody>
   </table>
-
 </body>
 </html>
