@@ -5,7 +5,7 @@
     <thead>
       <tr>
         <th> Color </th>
-        <th> {
+        <th> Yellow {
   background-color: #FFC300; /* Yellow */
   color: white;
   padding: 15px;
