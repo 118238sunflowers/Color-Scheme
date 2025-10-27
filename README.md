@@ -38,7 +38,7 @@
 </head>
 <body>
 
-  <h1>🌻 Sunflower Sunset Color Scheme 🌅</h1>
+  <h1> Sunflower Sunset Color Scheme </h1>
 
   <table>
     <thead>
