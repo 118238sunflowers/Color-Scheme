@@ -5,13 +5,7 @@
     <thead>
       <tr>
         <th> Color </th>
-        <th> Yellow {
-  background-color: #FFC300; /* Yellow */
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
-  font-family: Georgia, serif;
-}</th>
+        <th> Yellow </th>
         <th>Brown</th>
         <th>Pink</th>
         <th>Blue</th>
