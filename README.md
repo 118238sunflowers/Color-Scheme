@@ -1,44 +1,5 @@
 # Color-Scheme
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sunflower Sunset Color Scheme</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fff8f0;
-      color: #222;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      background: linear-gradient(90deg, #FFC300, #FF6F91, #4A90E2);
-      color: white;
-      padding: 15px;
-      border-radius: 10px;
-      font-family: Georgia, serif;
-    }
-    table {
-      width: 90%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: center;
-    }
-    th {
-      background-color: #f4f4f4;
-    }
-  </style>
-</head>
-<body>
-
-  <h1> Sunflower Sunset Color Scheme </h1>
+  <h3> Sunflower Sunset Color Scheme </h3>
 
   <table>
     <thead>
